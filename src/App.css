@@ -59,7 +59,7 @@ flex-direction: column;
 
 .paragraph {
   font-family: sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
 }
 
@@ -91,9 +91,6 @@ body {
 @media (min-width: 769px) {
   .container {
     margin: 2.5rem auto;
-  }
-  .info-container {
-    margin: 0rem auto;
   }
 }
 
@@ -222,17 +219,6 @@ body {
   margin-left: 50px;
 }
 
-@media(max-width:425px) {
-  .paragraph {
-    padding-right: 0px;
-  }
-
-}
-
-.paragraph {
-  max-width: 700px;
-}
-
 .update-save-button{
   color: white;
   font-size: 24px;
@@ -259,4 +245,9 @@ body {
   flex-direction: column;
   align-content: center;
   justify-content: start;
+}
+
+.content-paragraph {
+  padding: 10px;
+  font-size: 18px;
 }

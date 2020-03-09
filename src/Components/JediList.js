@@ -19,7 +19,6 @@ class JediList extends Component {
       })
       return ( 
          <div >
-            <h4 className="info grey-background">Your Character</h4>
             {displayList}
          </div>
        );

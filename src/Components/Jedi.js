@@ -42,13 +42,13 @@ class Jedi extends Component {
    render() { 
       let displayCharacterContent = this.state.jediTypeInfo.map(e => {
          if(e.type === this.props.type){
-            return <p className="paragraph"> {e.content} </p>
+            return <p className="content-paragraph paragraph"> {e.content} </p>
          }
       })
 
       let displayLightsaberContent = this.state.jediTypeInfo.map(e => {
          if(e.type === this.props.type) {
-            return <p className="bottom-content paragraph">
+            return <p className="bottom-content content-paragraph paragraph">
                {e.lightsaberContent}
             </p>
          }
