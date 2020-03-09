@@ -29,6 +29,7 @@ class App extends Component {
      this.addJedi = this.addJedi.bind(this);
      this.updateJediName = this.updateJediName.bind(this);
      this.deleteJedi = this.deleteJedi.bind(this);
+     this.resetQuiz = this.resetQuiz.bind(this);
   }
 
   componentDidMount() {
@@ -37,7 +38,7 @@ class App extends Component {
       this.setState({
         jedi: res.data
       })
-    })
+    });
     // for quiz section
     const shuffledAnswerOptions = quizQuestions.map(question => this.suffleArray(question.answers) );
       this.setState({
@@ -144,21 +145,6 @@ class App extends Component {
     }
   }
 
-  resetQuiz() {
-    if(this.state.reset){
-      this.setState({
-        counter: 0,
-        questionId: 1,
-        question: '',
-        answerOptions: [],
-        answer: '',
-        answersCount: {},
-        result: '',
-        reset: false
-      })
-    }
-  }
-
   renderQuiz() {
     return (
       <Quiz 
@@ -173,23 +159,31 @@ class App extends Component {
   }
 
   renderResult() {
-    return <Result quizResult={this.state.result} />;
+    return <Result 
+      quizResult={this.state.result}
+      retake={this.resetQuiz}
+    />;
+  }
+
+  resetQuiz() {
+    this.setState({
+      counter: 0,
+      questionId: 1,
+      question: '',
+      answerOptions: [],
+      answer: '',
+      answersCount: {},
+      result: ''
+    });
+    this.componentDidMount()
   }
 
   render() { 
-    console.log(this.state.jedi)
+    // console.log(this.state.jedi)
     return ( 
       <div className='App'>
         <h1>Jedi Character Builder</h1>
         <Header />
-        {/* <Quiz 
-          answers={this.state.answer}
-          answerOptions={this.state.answerOptions}
-          questionId={this.state.questionId}
-          question={this.state.question}
-          questionTotal={quizQuestions.length}
-          onAnswerSelected={this.handleAnswerSelected}
-        /> */}
         {this.state.result ? this.renderResult() : this.renderQuiz()}
         <JediList 
           type={this.state.result}

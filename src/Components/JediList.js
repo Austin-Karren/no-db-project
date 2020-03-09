@@ -14,12 +14,12 @@ class JediList extends Component {
                      key={e.id}
                      jedi={e}
                      updateName={this.props.updateJediName}
-                     delete={this.props.deleteJedi}
+                     delete={this.props.delete}
                /> )
       })
       return ( 
          <div >
-            <h4>Your Character</h4>
+            <h4 className="info grey-background">Your Character</h4>
             {displayList}
          </div>
        );

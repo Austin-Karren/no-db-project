@@ -185,20 +185,20 @@ body {
 
 .jedi-info {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin-bottom: 50px;
-}
-
-img{
-  max-width: 100%;
 }
 
 .jedi-person {
   padding-top: 5px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50px;
 }
 
 #jedi-character-img {
-  max-width: 550px;
+  width: 100%;
+  align-self: center;
 }
 
 .ligthsaber-info {
@@ -206,7 +206,7 @@ img{
 }
 
 #lightsaber-img {
-  max-width: 700px;
+  width: 100%;
   height: auto;
   align-self: center;
 }
@@ -218,6 +218,8 @@ img{
 .update-name-input {
   font-size: 24px;
   border: 0px;
+  padding: 0;
+  margin-left: 50px;
 }
 
 @media(max-width:425px) {
@@ -225,6 +227,10 @@ img{
     padding-right: 0px;
   }
 
+}
+
+.paragraph {
+  max-width: 700px;
 }
 
 .update-save-button{
@@ -235,3 +241,22 @@ img{
   border-radius: 25px;
 }
 
+.delete-button {
+  justify-self: end;
+  align-self: center;
+}
+
+.grey-background {
+  background-color: #eeeeee;
+}
+
+.retake-button {
+  margin-top: 25px;
+}
+
+.center-element {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: start;
+}

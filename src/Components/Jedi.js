@@ -42,13 +42,13 @@ class Jedi extends Component {
    render() { 
       let displayCharacterContent = this.state.jediTypeInfo.map(e => {
          if(e.type === this.props.type){
-            return <p className="info paragraph"> {e.content} </p>
+            return <p className="paragraph"> {e.content} </p>
          }
       })
 
       let displayLightsaberContent = this.state.jediTypeInfo.map(e => {
          if(e.type === this.props.type) {
-            return <p className="bottom-content">
+            return <p className="bottom-content paragraph">
                {e.lightsaberContent}
             </p>
          }
@@ -85,6 +85,7 @@ class Jedi extends Component {
                />
                {displayLightsaberContent}
             </div>
+            <button className="update-save-button delete-button" onClick={() => this.props.delete(this.props.jedi.id)}>Delete</button>
          </div>
        );
    }
