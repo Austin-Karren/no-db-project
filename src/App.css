@@ -1,0 +1,237 @@
+.App {
+  /* text-align: center; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #eeeeee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.upper-case {
+  text-transform: uppercase;
+}
+
+h1 {
+  background-color: #006cb1;
+  color: white;
+  text-align: center;
+  margin: 0px;
+  padding: 25px;
+  width: 100%;
+  font-family: sans-serif;
+  font-weight: 700;
+}
+
+h4 {
+  font-family: sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+header {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+  /* text-align: center; */
+}
+
+.top-page-info{
+display: flex;
+flex-direction: column;
+}
+
+.info {
+  background-color: white;
+  height: auto;
+  width: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  max-width: 900px;
+  margin-top: 25px;
+}
+
+.paragraph {
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.img-header {
+  height: auto;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: sans-serif;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 3px;
+}
+
+@media (min-width: 769px) {
+  .container {
+    margin: 2.5rem auto;
+  }
+  .info-container {
+    margin: 0rem auto;
+  }
+}
+
+
+/* Result Component */
+.result {
+  padding: 1.5rem 2.5rem;
+}
+
+/* Quiz Component */
+.answerOptions {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* QuestionCount Component */
+.questionCount {
+  padding: 1.5rem 2.5rem 0;
+  font-size: 14px;
+}
+
+/* Question Component */
+.question {
+  margin: 0;
+  padding: 0.5rem 2.5rem 1.5rem 2.5rem;
+}
+
+/* AnswerOption Component */
+.answerOption {
+  border-top: 1px solid #eee;
+}
+
+.answerOption:hover {
+  background-color: #eefbfe;
+}
+
+.radioCustomButton {
+  position: absolute;
+  width: auto;
+  opacity: 0;
+}
+
+.radioCustomLabel {
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.radioCustomLabel {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 1.5rem 2.5rem 1.5rem 5rem;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out 0.3s;
+}
+
+.fade-leave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 1;
+}
+
+.fade-leave.fade-leave-active {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-appear {
+  opacity: 0;
+}
+
+.fade-appear.fade-appear-active {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.jedi-info {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 50px;
+}
+
+img{
+  max-width: 100%;
+}
+
+.jedi-person {
+  padding-top: 5px;
+}
+
+#jedi-character-img {
+  max-width: 550px;
+}
+
+.ligthsaber-info {
+  flex-direction: column;
+}
+
+#lightsaber-img {
+  max-width: 700px;
+  height: auto;
+  align-self: center;
+}
+
+.bottom-content{
+  padding-bottom: 40px;
+}
+
+.update-name-input {
+  font-size: 24px;
+  border: 0px;
+}
+
+@media(max-width:425px) {
+  .paragraph {
+    padding-right: 0px;
+  }
+
+}
+
+.update-save-button{
+  color: white;
+  font-size: 24px;
+  background-color: royalblue;
+  border: 0px;
+  border-radius: 25px;
+}
+
