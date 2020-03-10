@@ -38,6 +38,7 @@ class App extends Component {
       this.setState({
         jedi: res.data
       })
+      .catch(err => console.log(err))
     });
     // for quiz section
     const shuffledAnswerOptions = quizQuestions.map(question => this.suffleArray(question.answers) );
@@ -64,6 +65,7 @@ class App extends Component {
     .then(res => {
       this.setState({ jedi: res.data })
     })
+    .catch(err => console.log(err))
   }
 
   deleteJedi(id) {
