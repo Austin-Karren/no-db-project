@@ -62,7 +62,7 @@ class App extends Component {
     axios.put(`/api/jedi/${id}`, {name: newName})
     .then(res => {
       this.setState({ jedi: res.data })
-    })
+    }).catch(() => console.log('error'))
   }
 
   deleteJedi(id) {
@@ -71,7 +71,7 @@ class App extends Component {
       this.setState({
         jedi: res.data
       })
-    })
+    }).catch(() => console.log('error'))
   }
 
   suffleArray(array) {
