@@ -57,20 +57,22 @@ class Jedi extends Component {
       console.log(this.props.jedi)
       return ( 
          <div className="container jedi-person">
-            {this.state.isEditName ? (
-               <div>
-                  <input className="update-name-input info" onChange={(event) => this.handleChange(event)}/>
-                  <button className="update-save-button" onClick={() => {
-                     this.props.updateName(this.props.jedi.id, this.state.userInput);
-                     this.toggleEdit();
-                     }}
-                     >Save</button>
-               </div>
-            ):(
-               <h4 className="character-name info" onClick={this.toggleEdit}>
-                  {this.props.jedi.name}
-               </h4>
+            {this.state.isEditName 
+               ? (
+                  <div>
+                     <input className="update-name-input info" onChange={(event) => this.handleChange(event)}/>
+                     <button className="update-save-button" onClick={() => {
+                        this.props.updateName(this.props.jedi.id, this.state.userInput);
+                        this.toggleEdit();
+                        }}
+                        >Save</button>
+                  </div>
+               ): (
+                  <h4 className="character-name info" onClick={this.toggleEdit}>
+                     {this.props.jedi.name}
+                  </h4>
             )}
+            
             <div className="jedi-info info-container info">
                {/* <h4>{this.props.jedi.name}</h4> */}
                <img id="jedi-character-img"

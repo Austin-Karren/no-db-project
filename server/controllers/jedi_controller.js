@@ -42,7 +42,7 @@ module.exports = {
    },
    create: (req, res) => {
       console.log(req.body)
-      const {type, name, color} = req.body; 
+      const {type, name, color} = req.body;
       switch (type) {
          case 'guardian':
             obj = defaultTypes[0];
